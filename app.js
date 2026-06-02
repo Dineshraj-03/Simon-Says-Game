@@ -31,8 +31,9 @@ function userFlash(btn){
 }
 function levelUp(){
   userSeq=[];
-  level++;
   highScore=Math.max(highScore,level);
+  level++;
+  
   h2.innerText=`Level ${level}`
   let randIdx=Math.floor(Math.random()*4);
   let randColor=btns[randIdx];
@@ -49,7 +50,7 @@ function checkAns(idx){
   }else{
     h2.innerHTML = `Game Over!<br>
     Your Score: ${level-1}<br>
-    High Score: ${highScore-1}<br><br>
+    High Score: ${highScore}<br><br>
     Press any key to start`;
     document.querySelector("body").style.backgroundColor="red";
     setTimeout(function(){
