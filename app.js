@@ -49,7 +49,7 @@ function checkAns(idx){
   }else{
     h2.innerHTML = `Game Over!<br>
     Your Score: ${level-1}<br>
-    High Score: ${highScore}<br><br>
+    High Score: ${highScore-1}<br><br>
     Press any key to start`;
     document.querySelector("body").style.backgroundColor="red";
     setTimeout(function(){
